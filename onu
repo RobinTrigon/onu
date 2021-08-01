@@ -1,0 +1,31 @@
+#!/bin/bash
+
+function banner(){
+ echo -e "\033[0;35m                 
+  ___    _   _   _   _                                                                                                                                                
+ / _ \  | \ | | | | | |                                                                                                                                               
+| | | | |  \| | | | | |                                                                                                                                               
+| |_| | | |\  | | |_| |                                                                                                                                               
+ \___/  |_| \_|  \___/                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                         
+ "      
+ echo -e "                                        \033[0;36m   3rr0r-404 | fb: @robin2123.py"
+}
+
+banner
+echo -e "\033[0;34muses:  onu target-list.txt"
+echo -e "\033[0;29m  "
+echo -e "\033[0;31m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo -e "\033[0;29m  "
+
+
+
+for sub in $(cat $1)
+do
+
+echo "$sub" | awk -F[/:] '{print $4}'
+
+done
+echo " "
+echo -e "                                        \033[0;37m thanks to- Joy Ghosh"
+
